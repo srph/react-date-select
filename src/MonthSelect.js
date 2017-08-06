@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import T from 'prop-types';
 
-export default class YearSelect extends Component {
+export default class MonthSelect extends Component {
   render() {
+    const {placeholder, ...props} = this.props;
+
     return (
-      <select {...this.props} onChange={this.handleChange}>
-        <option>Select month</option>
+      <select {...props} onChange={this.handleChange}>
+        <option>{placeholder}</option>
         <option value="01">January</option>
         <option value="02">February</option>
         <option value="03">March</option>
@@ -24,4 +27,13 @@ export default class YearSelect extends Component {
   handleChange = evt => {
     this.props.onChange && this.props.onChange(evt.target.value);
   }
+}
+
+MonthSelect.propTypes = {
+  placeholder: T.string,
+  onChange: T.func
+}
+
+MonthSelect.defaultProps = {
+  placeholder: 'Select month',
 }

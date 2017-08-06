@@ -10,7 +10,7 @@ class YearSelect extends Component {
 
     return (
       <select {...this.props} onChange={this.handleChange}>
-        <option>Select year</option>
+        <option>{this.props.placeholder}</option>
         {years.map((year, i) =>
           <option value={year} key={year}>{year}</option>
         )}
@@ -26,12 +26,14 @@ class YearSelect extends Component {
 YearSelect.propTypes = {
   start: T.number,
   end: T.number,
-  onChange: T.func
+  onChange: T.func,
+  placeholder: T.string,
 }
 
 YearSelect.defaultProps = {
   start: 1970,
-  end: new Date().getFullYear()
+  end: new Date().getFullYear(),
+  placeholder: 'Select year'
 }
 
 export default YearSelect;

@@ -55,6 +55,7 @@ All other props are passed down to the `select` element as usual.
 | ----- | ---- | ----------- |
 | start | `number` | The starting year. Defaults to `1970` |
 | end | `number` | The ending year range. Defaults to `new Date().getFullYear()` |
+| placeholder | `string` | The placeholder text when select has a no value |
 | onChange | `function` | The callback when value changes |
 
 ### MonthSelect
@@ -63,6 +64,7 @@ All other props are passed down to the `select` element as usual.
 
 | Prop  | Type | Description |
 | ----- | ---- | ----------- |
+| placeholder | `string` | The placeholder text when select has a no value |
 | onChange | `function` | The callback when value changes |
 
 ### DaySelect
@@ -72,6 +74,8 @@ All other props are passed down to the `select` element as usual.
 | Prop  | Type | Description |
 | ----- | ---- | ----------- |
 | month | `string` (required) | The month to be used as basis for the days |
+| monthPlaceholder | `string` | The placeholder text when month is null |
+| placeholder | `string` | The placeholder text when select has a no value |
 | onChange | `function` | The callback when value changes |
 
 ## Setup
