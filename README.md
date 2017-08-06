@@ -8,13 +8,10 @@ npm i @srph/react-date-select
 
 ## Usage
 ```js
-import React, { Component } from 'react';
-import './App.css';
-import YearSelect from './YearSelect';
-import MonthSelect from  './MonthSelect';
-import DaySelect from './DaySelect';
+import React from 'react';
+import {YearSelect, MonthSelect, DaySelect} from '@srph/react-date-select';
 
-class App extends Component {
+class App extends React.Component {
   state = {
     y: 0,
     m: 0,
@@ -49,3 +46,35 @@ class App extends Component {
 
 ## API Documentation
 Here's a list of props you may use to customize the component for your use-case:
+
+### YearSelect
+
+All other props are passed down to the `select` element as usual.
+
+| Prop  | Type | Description |
+| ----- | ---- | ----------- |
+| onChange | `function` | The callback when value changes |
+
+### MonthSelect
+
+All other props are passed down to the `select` element as usual.
+
+| Prop  | Type | Description |
+| ----- | ---- | ----------- |
+| onChange | `function` | The callback when value changes |
+
+### DaySelect
+
+All other props are passed down to the `select` element as usual.
+
+| Prop  | Type | Description |
+| ----- | ---- | ----------- |
+| month | `string` (required) | The month to be used as basis for the days |
+| onChange | `function` | The callback when value changes |
+
+### Setup
+You can check the demo, or build it yourself locally:
+```bash
+npm install
+npm run start
+```
