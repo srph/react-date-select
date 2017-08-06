@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import range from 'lodash.range';
+import T from 'prop-types';
 
-const today = new Date();
-const ago = new Date();
-ago.setYear(today.getFullYear() - 20);
-const years = range(ago.getFullYear(), today.getFullYear() + 1);
-
-export default class YearSelect extends Component {
+class YearSelect extends Component {
   render() {
+    // We'll add an extra number on the `end`
+    // because `lodash.range` only goes from x to (y - 1).
+    const years = range(this.props.start, this.props.end + 1);
+
     return (
       <select {...this.props} onChange={this.handleChange}>
         <option>Select year</option>
@@ -22,3 +22,16 @@ export default class YearSelect extends Component {
     this.props.onChange && this.props.onChange(evt.target.value);
   }
 }
+
+YearSelect.propTypes = {
+  start: T.number,
+  end: T.number,
+  onChange: T.func
+}
+
+YearSelect.defaultProps = {
+  start: 1970,
+  end: new Date().getFullYear()
+}
+
+export default YearSelect;
