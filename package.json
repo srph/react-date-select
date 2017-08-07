@@ -17,7 +17,8 @@
     "url": "https://github.com/srph/react-date-select"
   },
   "dependencies": {
-    "lodash.range": "^3.2.0"
+    "lodash.range": "^3.2.0",
+    "prop-types": "^15.5.10"
   },
   "peerDependencies": {
     "react": "^15.6.1",
