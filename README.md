@@ -84,3 +84,13 @@ You can check the [demo](https://chairman-silences-84025.netlify.com), or build 
 npm install
 npm run start
 ```
+
+### Bundling package
+```
+npm run bundle
+```
+
+### Publish storybook
+```
+npm run storybook:publish
+```
