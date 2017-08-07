@@ -1,5 +1,5 @@
 # React Date Select
-Generic `select` elements for dates - year, month, and day.
+Generic `select` elements for dates - year, month, and day. [View demo](https://chairman-silences-84025.netlify.com)
 
 ## Installation
 ```
@@ -79,7 +79,7 @@ All other props are passed down to the `select` element as usual.
 | onChange | `function` | The callback when value changes |
 
 ## Setup
-You can check the demo, or build it yourself locally:
+You can check the [demo](https://chairman-silences-84025.netlify.com), or build it yourself locally:
 ```bash
 npm install
 npm run start
