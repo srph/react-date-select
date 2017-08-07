@@ -2,24 +2,12 @@
   "name": "@srph/react-date-select",
   "version": "0.1.0",
   "main": "lib/index.js",
-  "dependencies": {
-    "@storybook/addon-actions": "^3.2.0",
-    "@storybook/react": "^3.2.3",
-    "babel-cli": "^6.24.1",
-    "babel-core": "6.25.0",
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-loader": "7.0.0",
-    "babel-preset-react-app": "^3.0.1",
-    "webpack": "2.6.1"
-  },
-  "peerDependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  },
   "scripts": {
     "start": "npm run storybook",
     "build": "babel src -d lib",
+    "bundle": "npm run bundle:dev && npm run bundle:prod",
+    "bundle:dev": "webpack",
+    "bundle:prod": "cross-env NODE_ENV=production webpack",
     "postinstall": "npm run build",
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:publish": "build-storybook -c storybook"
@@ -27,5 +15,26 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/srph/react-date-select"
+  },
+  "dependencies": {
+    "lodash.range": "^3.2.0"
+  },
+  "peerDependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.0",
+    "@storybook/react": "^3.2.3",
+    "babel-cli": "^6.24.1",
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "babel-loader": "7.0.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
+    "babel-preset-react-app": "^3.0.1",
+    "cross-env": "^5.0.4",
+    "null-loader": "^0.1.1",
+    "webpack": "2.6.1"
   }
 }
