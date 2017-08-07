@@ -93,5 +93,9 @@
   "devDependencies": {
     "@storybook/addon-actions": "^3.2.0",
     "@storybook/react": "^3.2.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srph/react-date-select"
+  },
 }
