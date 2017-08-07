@@ -21,15 +21,13 @@ export default class DaySelect extends Component {
 
     // Last day of the month
     // http://stackoverflow.com/a/13773408/2698227
-    let last = new Date();
-    last.setMonth(month ? 1 : month + 1)
-    last.setDate(0);
-    last = last.getDate();
+    const last = new Date(new Date().getFullYear(), month, 0).getDate();
 
     return (
       <select {...props} onChange={this.handleChange}>
         <option value="0">{month ? this.props.placeholder : this.props.monthPlaceholder}</option>
-        {month && range(1, last).map((day) =>
+        {/* We'll add 1 allowance because lodash.range only iterate to n - 1 */}
+        {month && range(1, last + 1).map((day) =>
           <option key={day} value={day}>{day}</option>
         )}
       </select>
@@ -43,8 +41,9 @@ export default class DaySelect extends Component {
 
 DaySelect.propTypes = {
   placeholder: T.string,
-  month: T.string.isRequired,
-  monthPlaceholder: T.string
+  month: T.oneOfType([T.string, T.number]).isRequired,
+  monthPlaceholder: T.string,
+  onChange: T.func
 }
 
 DaySelect.defaultProps = {

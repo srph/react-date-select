@@ -10,7 +10,8 @@
     "bundle:prod": "cross-env NODE_ENV=production webpack",
     "postinstall": "npm run build",
     "storybook": "start-storybook -p 9001 -c storybook",
-    "storybook:publish": "build-storybook -c storybook"
+    "storybook:publish": "build-storybook -c storybook",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -35,9 +36,12 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
     "babel-preset-react-app": "^3.0.1",
     "cross-env": "^5.0.4",
+    "enzyme": "^2.9.1",
+    "jest": "^20.0.4",
     "null-loader": "^0.1.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "webpack": "2.6.1"
   }
 }

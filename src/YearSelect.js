@@ -4,12 +4,13 @@ import T from 'prop-types';
 
 class YearSelect extends Component {
   render() {
+    const {placeholder, start, end, onChange, ...props} = this.props;
     // We'll add an extra number on the `end`
     // because `lodash.range` only goes from x to (y - 1).
     const years = range(this.props.start, this.props.end + 1);
 
     return (
-      <select {...this.props} onChange={this.handleChange}>
+      <select {...props} onChange={this.handleChange}>
         <option>{this.props.placeholder}</option>
         {years.map((year, i) =>
           <option value={year} key={year}>{year}</option>
