@@ -1,6 +1,7 @@
 {
   "name": "react-date-select",
   "version": "0.1.0",
+  "main": "src/index.js",
   "dependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",
@@ -45,7 +46,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "storybook": "start-storybook -p 9001 -c storybook",
+    "storybook:publish": "build-storybook -c storybook"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -86,5 +89,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.0",
+    "@storybook/react": "^3.2.3"
   }
 }
