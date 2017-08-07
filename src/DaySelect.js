@@ -7,9 +7,14 @@ export default class DaySelect extends Component {
     if ( nextProps.month !== this.props.month ) {
       this.props.onChange && this.props.onChange(0);
     }
+
+    if ( nextProps.year !== this.props.year ) {
+      this.props.onChange && this.props.onChange(0);
+    }
   }
 
   render() {
+    const year = Number(this.props.year);
     const month = Number(this.props.month);
 
     // Select wrapper props
@@ -18,10 +23,11 @@ export default class DaySelect extends Component {
     delete props.month;
     delete props.monthPlaceholder;
     delete props.onChange;
+    delete props.year;
 
     // Last day of the month
     // http://stackoverflow.com/a/13773408/2698227
-    const last = new Date(new Date().getFullYear(), month, 0).getDate();
+    const last = new Date(this.props.year, month, 0).getDate();
 
     return (
       <select {...props} onChange={this.handleChange}>
@@ -43,10 +49,12 @@ DaySelect.propTypes = {
   placeholder: T.string,
   month: T.oneOfType([T.string, T.number]).isRequired,
   monthPlaceholder: T.string,
-  onChange: T.func
+  onChange: T.func,
+  year: T.oneOfType([T.string, T.number])
 }
 
 DaySelect.defaultProps = {
   placeholder: 'Select day',
-  monthPlaceholder: 'Select month to proceed'
+  monthPlaceholder: 'Select month to proceed',
+  year: new Date().getFullYear()
 }

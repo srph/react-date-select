@@ -73,6 +73,7 @@ All other props are passed down to the `select` element as usual.
 
 | Prop  | Type | Description |
 | ----- | ---- | ----------- |
+| year | `string` | The year to be used as basis for the month. Useful for leap years. Defaults to `new Date().getFullYear()`. |
 | month | `string` (required) | The month to be used as basis for the days |
 | monthPlaceholder | `string` | The placeholder text when month is null. Defaults to `Select month to proceed`. |
 | placeholder | `string` | The placeholder text when select has no value. Defaults to `Select day`. |

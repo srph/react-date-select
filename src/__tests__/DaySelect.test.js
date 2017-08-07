@@ -39,10 +39,17 @@ test('onChange callback', () => {
   expect(onChange.mock.calls[0][0]).toBe(31)
 })
 
-test('changing month calls onChange with null value', () => {
+test('changing month should reset value', () => {
   const onChange = jest.fn();
   const wrapper = shallow(<DaySelect month={1} onChange={onChange} />)
   wrapper.setProps({ month: 2 });
+  expect(onChange.mock.calls[0][0]).toBe(0)
+})
+
+test('changing year should reset value', () => {
+  const onChange = jest.fn();
+  const wrapper = shallow(<DaySelect year={2017} month={1} onChange={onChange} />)
+  wrapper.setProps({ year: 2016 });
   expect(onChange.mock.calls[0][0]).toBe(0)
 })
 
