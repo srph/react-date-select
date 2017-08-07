@@ -1,6 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
-import {MonthSelect} from '../';
+import {MonthSelect} from '../src';
 
 storiesOf('MonthSelect', module)
   .add('basic', () => (
