@@ -2,9 +2,19 @@
 Generic `select` elements for dates - year, month, and day. [View demo](https://chairman-silences-84025.netlify.com)
 
 ## Installation
-```
+```bash
 npm i @srph/react-date-select
 ```
+
+### Script tags
+If you're not using a bundler like Browserify or Webpack, simply add the script tag after your React script tag.
+
+```html
+<!-- Script tags for React and other libraries -->
+<script src="https://unpkg.com/@srph/react-date-select/dist/react-date-select.min.js"></script>
+```
+
+This library is exposed as `ReactDateSelect` (e.g., `ReactDateSelect.YearSelect`, `ReactDateSelect.MonthSelect`, `ReactDateSelect.DaySelect`).
 
 ## Usage
 ```js
