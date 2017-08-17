@@ -28,10 +28,5 @@ module.exports = {
         },
       },
     ],
-  },
-
-  externals: [{
-    jquery: 'jQuery',
-    '@srph/jqt': 'jQuery'
-  }]
+  }
 };
