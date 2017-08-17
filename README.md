@@ -1,5 +1,7 @@
 # React Date Select [![npm version](https://img.shields.io/npm/v/@srph/react-date-select.svg?style=flat-square)](https://npmjs.com/packages/@srph/react-date-select) [![Build Status](https://img.shields.io/travis/srph/react-date-select.svg?style=flat-square)](https://travis-ci.org/srph/react-date-select?branch=master)
-Generic `select` elements for dates - year, month, and day. [View demo](https://chairman-silences-84025.netlify.com)
+Generic `select` elements for dates - year, month, and day.
+
+[View demo](https://chairman-silences-84025.netlify.com) / [View examples](storybook)
 
 ## Installation
 ```bash
