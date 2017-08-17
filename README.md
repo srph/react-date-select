@@ -19,6 +19,7 @@ If you're not using a bundler like Browserify or Webpack, simply add the script 
 This library is exposed as `ReactDateSelect` (e.g., `ReactDateSelect.YearSelect`, `ReactDateSelect.MonthSelect`, `ReactDateSelect.DaySelect`).
 
 ## Usage
+
 ```js
 import React from 'react';
 import {YearSelect, MonthSelect, DaySelect} from '@srph/react-date-select';
@@ -55,6 +56,8 @@ class App extends React.Component {
   }
 }
 ```
+
+[Checkout the examples](storybook).
 
 ## API Documentation
 Here's a list of props you may use to customize the component for your use-case:
