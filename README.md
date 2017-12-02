@@ -5,7 +5,7 @@ Generic `select` elements for dates - year, month, and day.
 
 ## Installation
 ```bash
-npm i @srph/react-date-select
+npm i @srph/react-date-select --save
 ```
 
 ### Script tags
