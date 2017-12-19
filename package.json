@@ -6,7 +6,7 @@
     "start": "npm run storybook",
     "build": "babel src -d lib",
     "bundle": "cross-env NODE_ENV=production webpack",
-    "postinstall": "npm run build",
+    "prepare": "npm run build",
     "storybook": "start-storybook -p 9001 -c storybook",
     "storybook:publish": "build-storybook -c storybook",
     "test": "jest"
